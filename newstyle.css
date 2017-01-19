@@ -18,14 +18,31 @@ canvas {
   cursor: default;
   background-color: black;
 }
-
+#start {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  height: auto;
+  width: 100px;
+  margin-left: -110px;
+  background-color: #16a085;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+#start:hover{
+  background-color: #10826B;
+}
 #save {
   position: absolute;
   bottom: 20px;
   left: 50%;
   height: auto;
   width: 100px;
-  margin-left: -75px;
   background-color: #16a085;
   border: none;
   font-weight: bold;
@@ -44,7 +61,7 @@ canvas {
   left: 50%;
   height: auto;
   width: 100px;
-  margin-left: 30px;
+  margin-left: 110px;
   background-color: #e74c3c;
   border: none;
   cursor: pointer;

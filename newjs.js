@@ -22,10 +22,7 @@ function setCanvasBG(){
   ctx.rect(0, 0, c.width, c.height);
   ctx.fillStyle = "#000";
   ctx.fill();*/
-
-  var img=document.getElementById("bgImg");
-
-  ctx.drawImage(img,10,10);
+  //ctx.drawImage(img,10,10);
 }
 
 //initialise canvas items
@@ -61,9 +58,17 @@ function draw(e){
 
   ctx.stroke();
 }
+$("#start").click(function() {
+	var img = new Image();   // Create new img element
+	img.addEventListener("load", function() {
+    ctx.drawImage(img,0,0);
+	}, false);
+	img.src = 'https://i.imgur.com/atBbPfg.jpg'; // Set source path
+});
 
 //save canvas
 $("#save").click(function() {
+
   var html = " ";
   html += "<img src='" + c.toDataURL() + "' alt='from canvas'/>";
   var pageStyle = "<style>body{margin:0; padding: 0;}</style>";
@@ -80,5 +85,3 @@ $("#clear").click(function() {
 	setCanvasBG();
   $('p').show();
 });
-
-//photo taking
