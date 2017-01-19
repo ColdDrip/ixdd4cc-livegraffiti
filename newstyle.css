@@ -16,6 +16,7 @@ body {
 
 canvas {
   cursor: default;
+  background-color: black;
 }
 
 #save {

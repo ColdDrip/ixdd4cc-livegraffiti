@@ -22,7 +22,7 @@ function setCanvasBG(){
   ctx.rect(0, 0, c.width, c.height);
   ctx.fillStyle = "#000";
   ctx.fill();*/
-  
+
   var img=document.getElementById("bgImg");
 
   ctx.drawImage(img,10,10);
