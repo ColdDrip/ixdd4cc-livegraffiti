@@ -8,7 +8,15 @@
     <link href="newstyle.css" rel="stylesheet">
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas">
+      <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
+    </canvas>
+    <div class="camera">
+    <video id="video">Video stream not available.</video>
+    <button id="startbutton">Take photo</button>
+  </div>
     <img src="http://i.imgur.com/atBbPfg.jpg" id="bgImg" alt="">
 <button id="save">Save</button>
 <button id="clear">Clear</button>

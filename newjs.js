@@ -80,3 +80,5 @@ $("#clear").click(function() {
 	setCanvasBG();
   $('p').show();
 });
+
+//photo taking
