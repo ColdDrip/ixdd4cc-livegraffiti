@@ -1,6 +1,8 @@
 //set canvas
 var c = document.getElementById('canvas');
 var ctx = c.getContext("2d");
+var c2 = document.getElementById('canvas2');
+var ctx2 = c2.getContext("2d");
 
 resizeWindow();
 
@@ -34,6 +36,7 @@ setCanvasBG();  //bg color
 function resizeWindow(){
 	c.width  = window.innerWidth;
 	c.height = window.innerHeight;
+
   setCanvasBG();
   $('p').show();
 }
@@ -61,9 +64,9 @@ function draw(e){
 $("#start").click(function() {
 	var img = new Image();   // Create new img element
 	img.addEventListener("load", function() {
-    ctx.drawImage(img,0,0);
+    ctx2.drawImage(img,0,0);
 	}, false);
-	img.src = 'https://i.imgur.com/atBbPfg.jpg'; // Set source path
+	img.src = 'bg.jpg'; // Set source path
 });
 
 //save canvas

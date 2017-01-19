@@ -12,11 +12,29 @@ body {
   width: 100%;
   overflow: hidden;
   font-family: 'Archivo Narrow', sans-serif;
+  background-color: black;
+}
+.wrapper {
+    position: relative;
+    width: 100vw;
 }
 
+.wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 canvas {
   cursor: default;
-  background-color: black;
+  background-color: transparent;
+}
+canvas2 {
+  cursor: default;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+
 }
 #start {
   position: absolute;
