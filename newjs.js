@@ -3,6 +3,8 @@ var c = document.getElementById('canvas');
 var ctx = c.getContext("2d");
 var c2 = document.getElementById('canvas2');
 var ctx2 = c2.getContext("2d");
+var c3 = document.getElementById('canvas3');
+var ctx3 = c2.getContext("2d");
 
 resizeWindow();
 
@@ -38,6 +40,8 @@ function resizeWindow(){
 	c.height = window.innerHeight;
 	c2.width  = window.innerWidth;
 	c2.height = window.innerHeight;
+	c3.width  = window.innerWidth;
+	c3.height = window.innerHeight;
 
   setCanvasBG();
   $('p').show();
@@ -63,12 +67,24 @@ function draw(e){
 
   ctx.stroke();
 }
+
+//call to action
 $("#start").click(function() {
 	var img = new Image();   // Create new img element
 	img.addEventListener("load", function() {
     ctx2.drawImage(img,0,0);
 	}, false);
 	img.src = 'bg.jpg'; // Set source path
+});
+//twitter
+$("#tweet").click(function() {
+	ctx3.drawImage(c, 0, 0);
+	ctx3.drawImage(c2, 0, 0);
+	var html = " ";
+  html += "<img src='" + c.toDataURL() + c2.toDataURL() + "' alt='from canvas'/>";
+  var pageStyle = "<style>body{margin:0; padding: 0;}</style>";
+  var tab = window.open();
+  tab.document.write(html + pageStyle);
 });
 
 //save canvas
@@ -88,6 +104,7 @@ $('canvas, p').click(function(){
 $("#clear").click(function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx2.clearRect(0, 0, canvas.width, canvas.height);
+	//ctx3.clearRect(0, 0, canvas.width, canvas.height);
 	setCanvasBG();
   $('p').show();
 });
