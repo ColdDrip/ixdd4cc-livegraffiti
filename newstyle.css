@@ -24,6 +24,12 @@ body {
     top: 0;
     left: 0;
 }
+
+h1, h4 {
+  color: white;
+}
+
+
 canvas {
   cursor: default;
   background-color: transparent;
@@ -42,8 +48,8 @@ canvas2 {
   left: 50%;
   height: auto;
   width: 100px;
-  margin-left: -110px;
-  background-color: #16a085;
+  margin-left: -200px;
+  background-color: rgb(231, 194, 35);
   border: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -53,7 +59,26 @@ canvas2 {
   cursor: pointer;
 }
 #start:hover{
-  background-color: #10826B;
+  background-color: rgb(201, 169, 27);
+}
+#tweet {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  height: auto;
+  width: 100px;
+  margin-left: -100px;
+  background-color: #00aced;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+#tweet:hover{
+  background-color: #069dd6;
 }
 #save {
   position: absolute;
@@ -79,7 +104,7 @@ canvas2 {
   left: 50%;
   height: auto;
   width: 100px;
-  margin-left: 110px;
+  margin-left: 100px;
   background-color: #e74c3c;
   border: none;
   cursor: pointer;

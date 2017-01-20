@@ -36,6 +36,8 @@ setCanvasBG();  //bg color
 function resizeWindow(){
 	c.width  = window.innerWidth;
 	c.height = window.innerHeight;
+	c2.width  = window.innerWidth;
+	c2.height = window.innerHeight;
 
   setCanvasBG();
   $('p').show();
@@ -85,6 +87,7 @@ $('canvas, p').click(function(){
 //Clear canvas
 $("#clear").click(function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx2.clearRect(0, 0, canvas.width, canvas.height);
 	setCanvasBG();
   $('p').show();
 });
