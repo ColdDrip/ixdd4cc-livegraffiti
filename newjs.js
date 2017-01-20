@@ -80,17 +80,15 @@ $("#start").click(function() {
 //twitter
 $("#tweet").click(function() {
 	var img = new Image();
-<<<<<<< HEAD
 	var html = " ";
   html += "<img src='" + c.toDataURL(img/png) + "' alt='from canvas'/>";
   var pageStyle = "<style>body{margin:0; padding: 0;}img{width:100vw height:100vh;}</style>";
-=======
->>>>>>> parent of 7c15e04... base64 to blob
 	img.addEventListener("load", function() {
-    ctx3.drawImage(c,0,0);
+    ctx3.drawImage(img,0,0);
 		ctx3.drawImage(c2,0,0);
 	}, false);
 	console.log("it is working!");
+	img.src= html;
 });
 
 //save canvas
@@ -124,7 +122,7 @@ $('canvas, p').click(function(){
 //Clear canvas
 $("#clear").click(function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx2.clearRect(0, 0, canvas.width, canvas.height);
+	//ctx2.clearRect(0, 0, canvas.width, canvas.height);
 	//ctx3.clearRect(0, 0, canvas.width, canvas.height);
 	console.log("thisonealsoworks");
 	setCanvasBG();
