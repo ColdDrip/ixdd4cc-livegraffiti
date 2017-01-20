@@ -75,26 +75,26 @@ $("#start").click(function() {
     ctx2.drawImage(img,0,0);
 	}, false);
 	img.src = 'bg.jpg'; // Set source path
+	console.log("start is working");
 });
 //twitter
 $("#tweet").click(function() {
-	ctx3.drawImage(c, 0, 0);
-	ctx3.drawImage(c2, 0, 0);
-	var html = " ";
-  html += "<img src='" + c.toDataURL() + c2.toDataURL() + "' alt='from canvas'/>";
-  var pageStyle = "<style>body{margin:0; padding: 0;}</style>";
-  var tab = window.open();
-  tab.document.write(html + pageStyle);
+	var img = new Image();
+	img.addEventListener("load", function() {
+    ctx3.drawImage(c,0,0);
+		ctx3.drawImage(c2,0,0);
+	}, false);
+	console.log("it is working!");
 });
 
 //save canvas
 $("#save").click(function() {
-
   var html = " ";
   html += "<img src='" + c.toDataURL() + "' alt='from canvas'/>";
-  var pageStyle = "<style>body{margin:0; padding: 0;}</style>";
+  var pageStyle = "<style>body{margin:0; padding: 0;}img{width:100vw height:100vh;}</style>";
   var tab = window.open();
   tab.document.write(html + pageStyle);
+	console.log(html);
 });
 
 $('canvas, p').click(function(){
@@ -105,6 +105,7 @@ $("#clear").click(function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx2.clearRect(0, 0, canvas.width, canvas.height);
 	//ctx3.clearRect(0, 0, canvas.width, canvas.height);
+	console.log("thisonealsoworks");
 	setCanvasBG();
   $('p').show();
 });
