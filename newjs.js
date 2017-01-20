@@ -80,37 +80,18 @@ $("#start").click(function() {
 //twitter
 $("#tweet").click(function() {
 	var img = new Image();
-	var html = " ";
-  html += "<img src='" + c.toDataURL(img/png) + "' alt='from canvas'/>";
-  var pageStyle = "<style>body{margin:0; padding: 0;}img{width:100vw height:100vh;}</style>";
 	img.addEventListener("load", function() {
-    ctx3.drawImage(img,0,0);
 		ctx3.drawImage(c2,0,0);
 	}, false);
 	console.log("it is working!");
-	img.src= html;
+
 });
 
 //save canvas
 $("#save").click(function() {
   var html = " ";
-  html += "<img src='" + c.toDataURL(img/png) + "' alt='from canvas'/>";
-	var c1 = c.toDataURL('image/png')
-	var png = c1.split(',')[1];
-	var s = window.atob(png);
-	var z = new Blob([s], {type:'image/png', encoding: 'utf-8'});
-
-	var fr = new FileReader();
-	fr.onload = function (oFREvent){
-		var vvv = oFREvent.target.result.split(',')[1];
-        vvv = atob(vvv);
-        var aaa = btoa(decodeURIComponent(escape(vvv)));
-        console.log(aaa);
-        tab.document.write(html + pageStyle).src =
-"data:image/png;base64," + aaa;
-	}
-	var q = fr.readAsDataURL(z);
-  var pageStyle = "<style>body{margin:0; padding: 0;}img{width:100vw height:100vh;}</style>";
+  html += "<img src='" + c.toDataURL() + "' alt='from canvas'/>";
+  var pageStyle = "<style>body{margin:0; padding: 0; background-color:black;}img{width:100vw height:100vh;}</style>";
   var tab = window.open();
   tab.document.write(html + pageStyle);
 	console.log(html);
@@ -122,7 +103,7 @@ $('canvas, p').click(function(){
 //Clear canvas
 $("#clear").click(function() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-	//ctx2.clearRect(0, 0, canvas.width, canvas.height);
+	ctx2.clearRect(0, 0, canvas.width, canvas.height);
 	//ctx3.clearRect(0, 0, canvas.width, canvas.height);
 	console.log("thisonealsoworks");
 	setCanvasBG();
