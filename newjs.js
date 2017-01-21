@@ -74,20 +74,28 @@ $("#start").click(function() {
 	img.addEventListener("load", function() {
     ctx2.drawImage(img,0,0);
 	}, false);
-	img.src = 'bg.jpg'; // Set source path
+	img.src = 'bg2.jpg'; // Set source path
 	console.log("start is working");
 });
-//twitter
+//compose both canvas and send to twitter
+/*
 $("#tweet").click(function() {
 	var img = new Image();
 	img.addEventListener("load", function() {
+    ctx3.drawImage(c,0,0);
 		ctx3.drawImage(c2,0,0);
 	}, false);
 	console.log("it is working!");
 
 });
 
-//save canvas
+//demo purposes
+$("#tweet").click(function() {
+	ctx2.clearRect(0, 0, canvas.width, canvas.height);
+
+});*/
+
+//save canvas to image
 $("#save").click(function() {
   var html = " ";
   html += "<img src='" + c.toDataURL() + "' alt='from canvas'/>";
